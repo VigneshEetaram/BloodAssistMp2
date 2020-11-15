@@ -21,93 +21,51 @@
         app:layout_constraintTop_toTopOf="parent"
         android:background="@drawable/bloodassistlogo"
         />
-    <EditText
-        android:id="@+id/searchBar"
-        android:layout_width="190dp"
-        android:layout_height="35dp"
-        android:layout_marginTop="5dp"
-        app:layout_constraintStart_toEndOf="@+id/homebtn"
-        app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageButton
-        android:id="@+id/searchIcon"
-        android:layout_width="35dp"
-        android:layout_height="35dp"
-        android:layout_marginTop="5dp"
-        android:src="@drawable/searchicon"
-        android:scaleType="fitCenter"
-
-        app:layout_constraintStart_toEndOf="@+id/searchBar"
-        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageButton
         android:id="@+id/profile"
         android:layout_width="30dp"
         android:layout_height="35dp"
-        android:layout_marginTop="5dp"
+        android:layout_marginStart="257dp"
+        android:layout_marginLeft="257dp"
+        android:layout_marginTop="4dp"
         android:background="@drawable/profile"
         android:scaleType="fitCenter"
         android:src="@drawable/profile"
-        app:layout_constraintStart_toEndOf="@+id/searchIcon"
+        app:layout_constraintStart_toEndOf="@+id/homebtn"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <ImageButton
-        android:id="@+id/cartBtn"
-        android:layout_width="30dp"
-        android:layout_height="35dp"
-        android:layout_marginTop="5dp"
-        android:background="@drawable/cart"
-        android:scaleType="fitCenter"
-        android:src="@drawable/cart"
-        android:onClick="cartPage"
-        app:layout_constraintStart_toEndOf="@+id/profile"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <ImageButton
-        android:id="@+id/wishlist"
-        android:layout_width="30dp"
-        android:layout_height="35dp"
-        android:layout_marginTop="5dp"
-        android:background="@drawable/wishlist"
-        android:scaleType="fitCenter"
-        android:src="@drawable/wishlist"
-        android:onClick="wishlist"
-        app:layout_constraintStart_toEndOf="@+id/cartBtn"
-        app:layout_constraintTop_toTopOf="parent" />
-
 
     <ImageButton
         android:id="@+id/settings"
         android:layout_width="30dp"
         android:layout_height="35dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginEnd="5dp"
-        android:layout_marginRight="5dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
         android:background="@drawable/settings"
         android:scaleType="fitCenter"
         android:src="@drawable/settings"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.842"
-        app:layout_constraintStart_toEndOf="@+id/wishlist"
+        app:layout_constraintStart_toEndOf="@+id/profile"
         app:layout_constraintTop_toTopOf="parent" />
-
-
 
     <ImageView
         android:id="@+id/slideImage"
         android:layout_width="383dp"
         android:layout_height="151dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="60dp"
         android:src="@drawable/balogo"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.555"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/searchBar" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/donar"
-        android:layout_width="120dp"
-        android:layout_height="120dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="12dp"
@@ -131,8 +89,8 @@
 
     <Button
         android:id="@+id/receiver"
-        android:layout_width="120dp"
-        android:layout_height="120dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="15dp"
@@ -146,7 +104,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="50dp"
         android:layout_marginLeft="50dp"
-        android:layout_marginTop="108dp"
+        android:layout_marginTop="80dp"
         android:layout_marginEnd="20dp"
         android:layout_marginRight="20dp"
         android:text="Receiver"
@@ -159,8 +117,8 @@
 
     <Button
         android:id="@+id/request"
-        android:layout_width="120dp"
-        android:layout_height="120dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="15dp"
@@ -174,12 +132,12 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="50dp"
         android:layout_marginLeft="50dp"
-        android:layout_marginTop="108dp"
+        android:layout_marginTop="90dp"
         android:layout_marginEnd="20dp"
         android:layout_marginRight="20dp"
         android:text="Request"
         android:textColor="@color/design_default_color_primary_dark"
-        android:textSize="17dp"
+        android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/request"
@@ -188,13 +146,12 @@
     <Button
         android:id="@+id/logout"
         android:layout_width="100dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="48dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="16dp"
+        android:onClick="logout"
         android:text="Logout"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.982"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView4"
-        android:onClick="logout"
-        />
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
 </androidx.constraintlayout.widget.ConstraintLayout>
