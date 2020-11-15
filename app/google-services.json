@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "36979167554",
+    "firebase_url": "https://bloodassistmp2.firebaseio.com",
+    "project_id": "bloodassistmp2",
+    "storage_bucket": "bloodassistmp2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:36979167554:android:09f2fe8b7c0c0bf6e0f8db",
+        "android_client_info": {
+          "package_name": "com.example.bloodassistmp2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "36979167554-qp14uhsodhf7fpknsuum2euhcjuifpth.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBr_-1E2RUJMZFjQsTSNiY__NJ2Z2CK-SQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "36979167554-qp14uhsodhf7fpknsuum2euhcjuifpth.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomePage">
+
+    <ImageButton
+        android:id="@+id/homebtn"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:adjustViewBounds="true"
+        android:cropToPadding="false"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:src="@drawable/bloodassistlogo"
+        android:scaleType="fitXY"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/bloodassistlogo"
+        />
+    <EditText
+        android:id="@+id/searchBar"
+        android:layout_width="190dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintStart_toEndOf="@+id/homebtn"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/searchIcon"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="5dp"
+        android:src="@drawable/searchicon"
+        android:scaleType="fitCenter"
+
+        app:layout_constraintStart_toEndOf="@+id/searchBar"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/profile"
+        android:layout_width="30dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/profile"
+        android:scaleType="fitCenter"
+        android:src="@drawable/profile"
+        app:layout_constraintStart_toEndOf="@+id/searchIcon"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/cartBtn"
+        android:layout_width="30dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/cart"
+        android:scaleType="fitCenter"
+        android:src="@drawable/cart"
+        android:onClick="cartPage"
+        app:layout_constraintStart_toEndOf="@+id/profile"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/wishlist"
+        android:layout_width="30dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/wishlist"
+        android:scaleType="fitCenter"
+        android:src="@drawable/wishlist"
+        android:onClick="wishlist"
+        app:layout_constraintStart_toEndOf="@+id/cartBtn"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ImageButton
+        android:id="@+id/settings"
+        android:layout_width="30dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginRight="5dp"
+        android:background="@drawable/settings"
+        android:scaleType="fitCenter"
+        android:src="@drawable/settings"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.842"
+        app:layout_constraintStart_toEndOf="@+id/wishlist"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+
+    <ImageView
+        android:id="@+id/slideImage"
+        android:layout_width="383dp"
+        android:layout_height="151dp"
+        android:layout_marginTop="50dp"
+        android:src="@drawable/balogo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.555"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/searchBar" />
+
+    <Button
+        android:id="@+id/donar"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="12dp"
+
+        android:background="@drawable/donar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/slideImage" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:text="Donar"
+        android:textColor="@color/design_default_color_primary_dark"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.615"
+        app:layout_constraintStart_toEndOf="@+id/donar"
+        app:layout_constraintTop_toBottomOf="@+id/slideImage" />
+
+    <Button
+        android:id="@+id/receiver"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/receiver"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/donar" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="108dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:text="Receiver"
+        android:textColor="@color/design_default_color_primary_dark"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/receiver"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <Button
+        android:id="@+id/request"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/balogo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/receiver" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="108dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:text="Request"
+        android:textColor="@color/design_default_color_primary_dark"
+        android:textSize="17dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/request"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <Button
+        android:id="@+id/logout"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="48dp"
+        android:text="Logout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4"
+        android:onClick="logout"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>

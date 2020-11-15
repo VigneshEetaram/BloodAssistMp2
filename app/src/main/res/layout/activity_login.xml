@@ -7,93 +7,110 @@
     tools:context=".Login">
 
     <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="250dp"
-        android:layout_height="250dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:id="@+id/logo"
+        android:layout_width="225dp"
+        android:layout_height="225dp"
+        android:layout_marginTop="48dp"
+        android:src="@drawable/bloodassistlogo"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.112"
-        app:srcCompat="@drawable/bloodassistlogo" />
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:fontFamily="@font/aclonica"
-        android:text="Login to Account"
-        android:textColor="#F44336"
-        android:textSize="20dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/Email"
+        android:id="@+id/email"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
-        android:ems="10"
+        android:layout_marginStart="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginRight="15dp"
         android:hint="Email"
-        android:inputType="textPersonName"
-        android:padding="10dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+        app:layout_constraintTop_toBottomOf="@+id/logo" />
 
     <EditText
-        android:id="@+id/Password"
+        android:id="@+id/passWord"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
-        android:ems="10"
+        android:layout_marginStart="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginRight="15dp"
         android:hint="Password"
-        android:inputType="textPersonName"
-        android:padding="10dp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Email"
-        app:layout_constraintVertical_bias="0.053" />
+        app:layout_constraintTop_toBottomOf="@+id/email" />
 
     <Button
-        android:id="@+id/LoginBtn"
-        android:layout_width="150dp"
+        android:id="@+id/signIn"
+        android:layout_width="100dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="152dp"
-        android:fontFamily="@font/aclonica"
-        android:text="Login"
+        android:text="Signin"
+        android:textAllCaps="false"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintEnd_toStartOf="@+id/register"
+        app:layout_constraintHorizontal_bias="0.626"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Password" />
+        app:layout_constraintTop_toBottomOf="@+id/passWord"
+        app:layout_constraintVertical_bias="0.09" />
 
-    <TextView
-        android:id="@+id/CreateTxt"
-        android:layout_width="wrap_content"
+    <Button
+        android:id="@+id/register"
+        android:layout_width="100dp"
         android:layout_height="wrap_content"
-        android:text="New Here? Create Account"
-        android:textColor="#F44336"
+        android:text="Register"
+        android:textAllCaps="false"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.918"
+        app:layout_constraintHorizontal_bias="0.713"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/LoginBtn"
-        app:layout_constraintVertical_bias="0.138" />
+        app:layout_constraintTop_toBottomOf="@+id/passWord"
+        app:layout_constraintVertical_bias="0.09" />
+
+    <Button
+        android:id="@+id/csg"
+        android:layout_width="175dp"
+        android:layout_height="45dp"
+        android:background="#B4EAEFEA"
+        android:text="Continue as guest ?"
+        android:textColor="#3F51B5"
+        android:textSize="16dp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.883"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/register"
+        app:layout_constraintVertical_bias="0.166" />
+
+    <Button
+        android:id="@+id/ar"
+        android:layout_width="125dp"
+        android:layout_height="34dp"
+        android:layout_marginTop="12dp"
+        android:text="register as admin"
+        android:textColor="#3F51B5"
+
+        android:textSize="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.902"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/csg" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/signIn" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
