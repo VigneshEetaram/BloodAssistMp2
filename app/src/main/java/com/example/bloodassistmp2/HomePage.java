@@ -6,12 +6,14 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 
 import com.google.firebase.auth.FirebaseAuth;
 
 public class HomePage extends AppCompatActivity {
-    private Button buttonMain, donarBtn,recBtn,reqBtn;
+    private ImageButton buttonMain, donarBtn,recBtn,reqBtn;
     private Button profileBtn,settingsBtn;
+
 
 
     @Override

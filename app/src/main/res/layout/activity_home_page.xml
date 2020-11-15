@@ -10,17 +10,16 @@
         android:id="@+id/homebtn"
         android:layout_width="35dp"
         android:layout_height="35dp"
-        android:adjustViewBounds="true"
-        android:cropToPadding="false"
         android:layout_marginStart="5dp"
         android:layout_marginLeft="5dp"
         android:layout_marginTop="5dp"
-        android:src="@drawable/bloodassistlogo"
-        android:scaleType="fitXY"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        android:adjustViewBounds="true"
         android:background="@drawable/bloodassistlogo"
-        />
+        android:cropToPadding="false"
+        android:scaleType="fitXY"
+        android:src="@drawable/bloodassistlogo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
     <ImageButton
@@ -62,15 +61,18 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
+    <ImageButton
         android:id="@+id/donar"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="12dp"
+        android:src="@drawable/donar"
+        android:scaleType="fitCenter"
 
         android:background="@drawable/donar"
+
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/slideImage" />
 
@@ -87,7 +89,7 @@
         app:layout_constraintStart_toEndOf="@+id/donar"
         app:layout_constraintTop_toBottomOf="@+id/slideImage" />
 
-    <Button
+    <ImageButton
         android:id="@+id/receiver"
         android:layout_width="100dp"
         android:layout_height="100dp"
@@ -95,6 +97,7 @@
         android:layout_marginLeft="16dp"
         android:layout_marginTop="15dp"
         android:background="@drawable/receiver"
+
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/donar" />
 
@@ -111,18 +114,19 @@
         android:textColor="@color/design_default_color_primary_dark"
         android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/receiver"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
-    <Button
+    <ImageButton
         android:id="@+id/request"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="15dp"
-        android:background="@drawable/balogo"
+        android:background="@drawable/request"
+
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/receiver" />
 
@@ -132,14 +136,14 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="50dp"
         android:layout_marginLeft="50dp"
-        android:layout_marginTop="90dp"
+        android:layout_marginTop="80dp"
         android:layout_marginEnd="20dp"
         android:layout_marginRight="20dp"
         android:text="Request"
         android:textColor="@color/design_default_color_primary_dark"
         android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/request"
         app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
@@ -147,7 +151,7 @@
         android:id="@+id/logout"
         android:layout_width="100dp"
         android:layout_height="40dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="40dp"
         android:onClick="logout"
         android:text="Logout"
         app:layout_constraintEnd_toEndOf="parent"
