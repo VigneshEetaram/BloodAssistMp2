@@ -1,13 +1,18 @@
 package com.example.bloodassistmp2;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.example.bloodassistmp2.models.donar_model;
+import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
@@ -18,10 +23,10 @@ import java.util.Map;
 
 public class donar extends AppCompatActivity {
     public static final String TAG = "TAG";
-    TextView DfullName, Ddob, Dbg, Dph, Demail, Daddress;
-Button Dsave;
-FirebaseFirestore fStore;
-String userID;
+    EditText DfullName, Ddob, Dbg, Dph, Demail, Daddress;
+    Button DsaveBtn;
+    FirebaseFirestore db;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,39 +38,34 @@ String userID;
         Dph = findViewById(R.id.dPh);
         Demail = findViewById(R.id.dEmail);
         Daddress = findViewById(R.id.dAddress);
-        Dsave = findViewById(R.id.donarSaveBtn);
-        fStore = FirebaseFirestore.getInstance();
+        DsaveBtn = findViewById(R.id.donarSaveBtn);
+        db = FirebaseFirestore.getInstance();
 
-        Dsave.setOnClickListener(new View.OnClickListener() {
+        DsaveBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String Dfn = DfullName.getText().toString();
-                String Dbirth = Ddob.getText().toString();
-                String Dgroup = Dbg.getText().toString();
-                String Dphone = Dph.getText().toString();
-                String Dmail = Demail.getText().toString();
-                String Dfaddress = Daddress.getText().toString();
-
-
-            }
-
-        });
-        DocumentReference documentReference = fStore.collection("donors").document(userID);
-        Map<String, Object> donarDetails = new HashMap<>();
-        donarDetails.put("fName", DfullName);
-        donarDetails.put("birth", Ddob);
-        donarDetails.put("Bgroup",Dbg);
-        donarDetails.put("Phone",Dph);
-        donarDetails.put("address",Daddress);
-        documentReference.set(donarDetails).addOnSuccessListener(new OnSuccessListener<Void>() {
-            @Override
-            public void onSuccess(Void aVoid) {
-                Log.d(TAG, "onSuccess: Donar Details Added ");
+                String name=DfullName.getText().toString();
+                String blodgroup=Dbg.getText().toString();
+                addData(name,blodgroup);
             }
         });
 
-
-
-
+    }
+    public void addData(String fullName,String bloodGroup){
+        donar_model donars = new donar_model(fullName,bloodGroup);
+        db.collection("donars")
+                .add(donars)
+                .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
+                    @Override
+                    public void onSuccess(DocumentReference documentReference) {
+                        Toast.makeText(getApplicationContext(),"Donar Recorded !!",Toast.LENGTH_LONG).show();
+                    }
+                })
+                .addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+                        Toast.makeText(getApplicationContext(),"nor recorded!!",Toast.LENGTH_LONG).show();
+                    }
+                });
     }
 }
