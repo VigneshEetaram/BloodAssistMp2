@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/homebg"
+    android:background="@drawable/homebgg"
     tools:context=".HomePage">
 
     <ImageButton
@@ -52,11 +52,30 @@
         app:layout_constraintStart_toEndOf="@+id/profile"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <TextView
+        android:layout_width="160dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="50dp"
+        android:fontFamily="@font/aclonica"
+        android:gravity="center"
+        android:text="BloodAssist"
+        android:textSize="24sp"
+
+        android:textStyle="bold|italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <ImageView
         android:id="@+id/slideImage"
-        android:layout_width="383dp"
-        android:layout_height="151dp"
-        android:layout_marginTop="60dp"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="170dp"
+        android:layout_marginLeft="170dp"
+        android:layout_marginTop="50dp"
         android:src="@drawable/balogo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -64,15 +83,15 @@
 
     <ImageButton
         android:id="@+id/donar"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
-        android:layout_marginTop="12dp"
-        android:src="@drawable/donar"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/donar"
         android:scaleType="fitCenter"
 
-        android:background="@drawable/donar"
+        android:src="@drawable/donar"
 
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/slideImage" />
@@ -88,7 +107,7 @@
         android:text="Donar"
         android:textColor="@color/teal_700"
 
-        android:textSize="24dp"
+        android:textSize="20dp"
         android:textStyle="bold|italic"
 
         app:layout_constraintEnd_toEndOf="parent"
@@ -98,8 +117,8 @@
 
     <ImageButton
         android:id="@+id/receiver"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="15dp"
@@ -114,13 +133,13 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="50dp"
         android:layout_marginEnd="20dp"
         android:layout_marginRight="20dp"
         android:background="#FFFFFF"
         android:text="Receiver"
         android:textColor="@color/teal_700"
-        android:textSize="24dp"
+        android:textSize="20dp"
 
         android:textStyle="bold|italic"
         app:layout_constraintEnd_toEndOf="parent"
@@ -130,8 +149,8 @@
 
     <ImageButton
         android:id="@+id/request"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="15dp"
@@ -146,13 +165,13 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="60dp"
         android:layout_marginEnd="20dp"
         android:layout_marginRight="20dp"
         android:background="@color/white"
         android:text="Request"
         android:textColor="@color/teal_700"
-        android:textSize="24dp"
+        android:textSize="20dp"
 
         android:textStyle="bold|italic"
         app:layout_constraintEnd_toEndOf="parent"
@@ -164,12 +183,12 @@
         android:id="@+id/logout"
         android:layout_width="100dp"
         android:layout_height="40dp"
-        android:layout_marginTop="64dp"
+        android:layout_marginTop="44dp"
         android:onClick="logout"
         android:text="Logout"
         app:backgroundTint="#009688"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.982"
+        app:layout_constraintHorizontal_bias="0.901"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView4" />
 </androidx.constraintlayout.widget.ConstraintLayout>
