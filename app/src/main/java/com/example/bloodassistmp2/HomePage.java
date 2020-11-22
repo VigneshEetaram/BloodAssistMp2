@@ -12,7 +12,7 @@ import com.google.firebase.auth.FirebaseAuth;
 
 public class HomePage extends AppCompatActivity {
     private ImageButton buttonMain, donarBtn,recBtn,reqBtn;
-    private Button profileBtn,settingsBtn;
+    private Button profileBtn,settingsBtn,abtBtn;
 
 
 
@@ -42,6 +42,13 @@ public class HomePage extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(getApplicationContext(), Requests.class));
+            }
+        });
+        abtBtn = findViewById(R.id.aboutBtn);
+        abtBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(),about.class));
             }
         });
     }

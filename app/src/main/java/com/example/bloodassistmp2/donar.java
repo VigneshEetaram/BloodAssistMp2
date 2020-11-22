@@ -3,6 +3,7 @@ package com.example.bloodassistmp2;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -23,6 +24,7 @@ import java.util.Map;
 
 public class donar extends AppCompatActivity {
     public static final String TAG = "TAG";
+    Button Dlist;
     EditText DfullName, Ddob, Dbg, Dph, Demail, Daddress;
     Button DsaveBtn;
     FirebaseFirestore db;
@@ -39,6 +41,7 @@ public class donar extends AppCompatActivity {
         Demail = findViewById(R.id.dEmail);
         Daddress = findViewById(R.id.dAddress);
         DsaveBtn = findViewById(R.id.donarSaveBtn);
+        Dlist = findViewById(R.id.showDonars);
         db = FirebaseFirestore.getInstance();
 
         DsaveBtn.setOnClickListener(new View.OnClickListener() {
@@ -47,6 +50,12 @@ public class donar extends AppCompatActivity {
                 String name=DfullName.getText().toString();
                 String blodgroup=Dbg.getText().toString();
                 addData(name,blodgroup);
+            }
+        });
+        Dlist.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(),listOfDonars.class));
             }
         });
 
@@ -64,7 +73,7 @@ public class donar extends AppCompatActivity {
                 .addOnFailureListener(new OnFailureListener() {
                     @Override
                     public void onFailure(@NonNull Exception e) {
-                        Toast.makeText(getApplicationContext(),"nor recorded!!",Toast.LENGTH_LONG).show();
+                        Toast.makeText(getApplicationContext(),"not recorded!!",Toast.LENGTH_LONG).show();
                     }
                 });
     }
