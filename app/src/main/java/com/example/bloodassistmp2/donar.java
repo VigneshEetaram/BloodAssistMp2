@@ -54,6 +54,9 @@ String userID;
         Map<String, Object> donarDetails = new HashMap<>();
         donarDetails.put("fName", DfullName);
         donarDetails.put("birth", Ddob);
+        donarDetails.put("Bgroup",Dbg);
+        donarDetails.put("Phone",Dph);
+        donarDetails.put("address",Daddress);
         documentReference.set(donarDetails).addOnSuccessListener(new OnSuccessListener<Void>() {
             @Override
             public void onSuccess(Void aVoid) {
